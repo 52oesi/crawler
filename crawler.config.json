@@ -1,0 +1,18 @@
+{
+  "headless": false,
+  "slowMoMs": 50,
+  "login": {
+    "url": "",
+    "usernameSelector": "",
+    "passwordSelector": "",
+    "submitSelector": ""
+  },
+  "analysis": {
+    "url": "",
+    "companyInputSelector": "",
+    "countInputSelector": "",
+    "startDateSelector": "",
+    "endDateSelector": "",
+    "submitSelector": ""
+  }
+}

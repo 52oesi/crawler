@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>JungiNet 경쟁사 분석</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header-bar">
+  <div class="logo">
+    <span class="logo-highlight">Jungi</span>Net
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h2>검색 조건</h2>
+
+    <div class="form-group">
+      <label for="companyInput">업체명</label>
+      <input
+        id="companyInput"
+        type="text"
+        placeholder="업체명 입력 (미입력 시: 이시에스컴)"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="countInput">공고 수</label>
+      <select id="countInput">
+        <option value="all">전체적용</option>
+        <option value="1">최근결과10건</option>
+        <option value="2">최근결과20건</option>
+        <option value="3">최근결과30건</option>
+        <option value="4">최근결과40건</option>
+        <option value="5">최근결과50건</option>
+        <option value="10">최근결과100건</option>
+        <option value="15">최근결과150건</option>
+        <option value="20" selected>최근결과200건</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <div class="toggle-header">
+        <label>종목(용역)</label>
+        <button id="servicePartToggle" type="button" class="toggle-btn">
+          펼치기
+        </button>
+      </div>
+      <div id="servicePartSelect" class="checkbox-list hidden">
+        <label><input type="checkbox" value="ser_all" checked /> 용역전체</label>
+        <label><input type="checkbox" value="P99" /> PC.전산.소프트웨어</label>
+        <label><input type="checkbox" value="P76" /> ESCO(에너지관련)</label>
+        <label><input type="checkbox" value="P44" /> 설계용역</label>
+        <label><input type="checkbox" value="P88" /> 소방설계</label>
+        <label><input type="checkbox" value="P45" /> 감리용역</label>
+        <label><input type="checkbox" value="P89" /> 전기감리</label>
+        <label><input type="checkbox" value="P91" /> 소방감리</label>
+        <label><input type="checkbox" value="P329" /> 정보시스템감리</label>
+        <label><input type="checkbox" value="P201" /> 소방시설관리</label>
+        <label><input type="checkbox" value="P204" /> 발전설비</label>
+        <label><input type="checkbox" value="P205" /> 정비적격</label>
+        <label><input type="checkbox" value="P214" /> 열화진단</label>
+        <label><input type="checkbox" value="P215" /> 전기안전관리</label>
+        <label><input type="checkbox" value="P352" /> 발송배전.전기(en)</label>
+        <label><input type="checkbox" value="P87" /> 통신설계(en)</label>
+        <label><input type="checkbox" value="P90" /> 통신감리(en)</label>
+        <label><input type="checkbox" value="P351" /> 전자.전산.정보통신(en)</label>
+        <label><input type="checkbox" value="P345" /> 소방.가스(en)</label>
+        <label><input type="checkbox" value="P290" /> 기타용역</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="startDate">시작일</label>
+      <input id="startDate" type="date" />
+    </div>
+
+    <div class="form-group">
+      <label for="endDate">종료일</label>
+      <input id="endDate" type="date" />
+    </div>
+
+    <button id="startBtn" class="btn-primary">크롤링 시작</button>
+    <hr style="margin: 10px 0" />
+    <div class="btn-row">
+      <button id="convertBtn" class="btn-primary">엑셀로 변환</button>
+      <button id="filterBtn" class="btn-primary">필터링</button>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <h1>데이터 수집 진행 상황</h1>
+    <div class="log-container">
+      <textarea id="logArea" readonly></textarea>
+    </div>
+  </main>
+</div>
+
+<footer class="footer-bar">
+  <span>ⓒ 2025 JungiNet</span>
+</footer>
+
+<script src="renderer.js"></script>
+</body>
+</html>
