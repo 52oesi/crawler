@@ -24,6 +24,7 @@
   "build": {
     "appId": "com.junginet.crawler",
     "productName": "JungiNetCrawler",
+    "publish": "never",
     "directories": {
       "output": "dist"
     },
